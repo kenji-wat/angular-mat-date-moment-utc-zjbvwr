@@ -1,0 +1,25 @@
+<mat-form-field>
+  <input matInput [matDatepicker]="dp" placeholder="Verbose datepicker" [formControl]="myDate.value">
+  <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+  <mat-datepicker #dp></mat-datepicker>
+</mat-form-field>
+<br>
+Value to String Output: {{getValueAsString()}}
+<br>
+Value to JSON Output: {{getValueAsJSON()}}
+
+<hr/>
+
+<p>By default: {{myDate.value}} 
+<br/>Medium date: {{myDate.value | date:'medium'}} 
+<br/>Short date: {{myDate.value | date:'short'}}
+<br/>Short time: {{myDate.value | date: 'shortTime' }} 
+<br/>Medium time: {{myDate.value | date: 'mediumTime' }} 
+<br/>Long time: {{myDate.value | date: 'longTime' }} 
+<br/>Full time: {{myDate.value | date: 'fullTime' }} 
+
+</p>
+
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
